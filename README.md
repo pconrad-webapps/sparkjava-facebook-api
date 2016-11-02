@@ -8,16 +8,17 @@ To deploy
 
 One time steps:
 
-1.  *One time step*: Register a Github OAuth application at
-    <https://github.com/settings/applications/new> to obtain
-        values for GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET
-
+1.  *One time step*: Register a Facebook OAuth application.  Go to <https://developers.facebook.com/>, click upper right hand
+    corner to get the menu, and go to "Add New Application".
+    
+    You will then need to follow the steps to get values for the Facebook client id and Facebook client secret.
+    
 2.  *One time step*:
     Copy `env.sh.SAMPLE` to `env.sh`, and edit `env.sh`
         to provide correct values
-	    for GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.  For APPLICATION_SALT,
+	    for FACEBOOK_CLIENT_ID and FACEBOOK_CLIENT_SECRET.  For APPLICATION_SALT,
 	        enter a long random string of letters and digits (20 or more).
-		    For GITHUB_CALLBACK_URL, enter `http://localhost:4567/callback`.
+		    For FACEBOOK_CALLBACK_URL, enter `http://localhost:4567/callback`.
 		        Substitute the actual hostname/port on the server on which you are
 			    running,
 			        if appropriate.   Note that `env.sh` is ignored in the `.gitignore`
@@ -52,6 +53,4 @@ Some helpful references can be found here:
 
 * https://github.com/pac4j/spark-pac4j
 * https://github.com/pac4j/spark-pac4j-demo
-* https://github.com/pconrad-webapps/sparkjava-pac4j-github-oauth-demo
-* https://github.com/kohsuke/github-api
 
